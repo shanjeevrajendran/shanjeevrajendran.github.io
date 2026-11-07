@@ -1,4 +1,5 @@
-/* Personal site v4: a system view. Small name, numbered nav, hairline tiles and panels that carry real content. */
+/* Personal site v4: a system view. Small name, numbered nav, hairline tiles and panels that carry real content.
+   Type sizes: 12 labels (mono) · 14 artefacts (mono) · 15 tile text and titles · 17 body · 22 lead. */
 
 :root {
   --ground: #ececea;
@@ -16,7 +17,9 @@
 
   --frame: 10px;
   --pad: clamp(20px, 3.4vw, 48px);
+  --inset: 22px;
   --page: 1280px;
+  --gap: 120px;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 
   color-scheme: light dark;
@@ -47,7 +50,7 @@ body {
   background-image: var(--dots);
   background-position: 12px 12px;
   color: var(--ink);
-  font: 400 16px/1.5 var(--sans);
+  font: 400 17px/1.6 var(--sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -78,15 +81,15 @@ ol, ul { padding: 0; list-style: none; }
   background: var(--ink);
   color: var(--tile);
   padding: 8px 12px;
-  font: 500 13px/1 var(--mono);
+  font: 500 12px/1 var(--mono);
 }
 .skip:focus { left: 24px; }
 
-/* Bar: name small at the left, numbered nav at the right. */
+/* Bar: name small at the left, numbered nav at the right, both on the tiles' text edge. */
 .bar {
   max-width: calc(var(--page) + 2 * var(--pad));
   margin: 0 auto;
-  padding: 34px var(--pad) 30px;
+  padding: 34px calc(var(--pad) + var(--inset)) 30px;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -107,7 +110,7 @@ ol, ul { padding: 0; list-style: none; }
   text-transform: uppercase;
 }
 .nav a { display: inline-flex; gap: 8px; padding: 6px 0; }
-.nav .n, .sec-title .n { color: var(--ink-3); }
+.n { color: var(--ink-3); }
 
 /* Bento and panels share one 12-column grid. The 1px gap over the line colour draws the hairlines. */
 .bento, .panel {
@@ -124,23 +127,25 @@ ol, ul { padding: 0; list-style: none; }
 
 .tile, .cell {
   background: var(--tile);
-  padding: 20px 22px 22px;
+  padding: 20px var(--inset) 22px;
   min-width: 0;
 }
 .tile { display: flex; flex-direction: column; }
 
 .tile-head { margin-bottom: 18px; }
-.file {
-  font: 400 12px/1.2 var(--mono);
+.file, .sec-title {
+  display: flex;
+  gap: 8px;
+  font: 400 12px/1.5 var(--mono);
   color: var(--ink-2);
   letter-spacing: 0.02em;
 }
 
-.tile-role      { grid-column: 1 / span 4; }
-.tile-cloakroom { grid-column: 5 / span 8; }
-.tile-stack     { grid-column: 1 / span 3; }
-.tile-writing   { grid-column: 4 / span 6; }
-.tile-elsewhere { grid-column: 10 / span 3; }
+/* The Cloakroom tile holds the right side of the first screen; role and stack share the left column. */
+.tile-role      { grid-column: 1 / span 4; grid-row: 1; }
+.tile-stack     { grid-column: 1 / span 4; grid-row: 2; }
+.tile-cloakroom { grid-column: 5 / span 8; grid-row: 1 / span 2; }
+.tile-writing   { grid-column: 1 / -1; grid-row: 3; }
 
 /* Role tile */
 .role {
@@ -148,13 +153,13 @@ ol, ul { padding: 0; list-style: none; }
   color: var(--ink-2);
   letter-spacing: 0.02em;
 }
-.role-2 { margin-top: 4px; color: var(--ink-3); }
+.role-2 { margin-top: 2px; color: var(--ink-3); }
 .nb { white-space: nowrap; }
 .lead {
   margin-top: auto;
-  padding-top: 40px;
-  font-size: clamp(1.25rem, 1.05rem + 0.6vw, 1.5rem);
-  line-height: 1.38;
+  padding-top: 32px;
+  font-size: 22px;
+  line-height: 1.4;
   letter-spacing: -0.012em;
   max-width: 24em;
   text-wrap: pretty;
@@ -167,24 +172,23 @@ ol, ul { padding: 0; list-style: none; }
   max-width: 44em;
 }
 .sample {
-  margin-top: 22px;
+  margin-top: 24px;
   display: grid;
-  gap: 16px;
+  gap: 20px;
 }
-.pane figcaption {
+.pane figcaption, .media figcaption {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 16px;
-  font: 400 11px/1 var(--mono);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font: 400 12px/1.5 var(--mono);
+  letter-spacing: 0.02em;
   color: var(--ink-3);
-  margin-bottom: 8px;
 }
+.pane figcaption { margin-bottom: 8px; }
 pre, code { font-family: var(--mono); }
 .sample pre {
-  font-size: 12.5px;
+  font-size: 14px;
   line-height: 1.7;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
@@ -209,7 +213,6 @@ pre, code { font-family: var(--mono); }
 .swap {
   font: inherit;
   letter-spacing: inherit;
-  text-transform: inherit;
   color: var(--ink-2);
   background: none;
   border: 0;
@@ -226,24 +229,23 @@ pre, code { font-family: var(--mono); }
 
 .tile-links {
   margin-top: auto;
-  padding-top: 22px;
+  padding-top: 24px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px 24px;
-  font: 400 12px/1 var(--mono);
-  letter-spacing: 0.04em;
+  font: 400 14px/1.4 var(--mono);
 }
 .tile-links a { padding: 6px 0; }
 
 /* Outbound arrows; on hover the underline fades in and the arrow nudges toward where it goes. */
-.tile-links a::after, .links a::after, .foot-links a::after {
+.tile-links a::after, .foot-links a::after {
   content: "↗";
   display: inline-block;
   margin-left: 0.4em;
   color: var(--ink-3);
   transition: transform 180ms var(--ease-out), color 180ms ease;
 }
-.tile-links a, .links a, .foot-links a, .nav a, .log .t, .foot-name a {
+.tile-links a, .foot-links a, .nav a, .log .t, .foot-name a, .media a + figcaption {
   text-decoration: underline;
   text-decoration-color: transparent;
   text-underline-offset: 4px;
@@ -252,80 +254,58 @@ pre, code { font-family: var(--mono); }
 
 /* stack.yml */
 .code {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.75;
+  white-space: pre-wrap;
 }
 .code .k { font-weight: 500; }
 .code .d { color: var(--ink-3); }
 
-/* writing.log */
+/* writing.log: date and source as log columns, the title in the text face. */
 .log { display: grid; gap: 2px; }
 .log a {
   display: grid;
-  grid-template-columns: 11ch 12ch minmax(0, 1fr);
-  gap: 0 12px;
-  padding: 7px 8px;
-  margin: 0 -8px;
-  font: 400 12.5px/1.55 var(--mono);
+  grid-template-columns: 11ch 13ch minmax(0, 1fr);
+  align-items: baseline;
+  gap: 0 16px;
+  padding: 8px 10px;
+  margin: 0 -10px;
   transition: background-color 160ms ease;
 }
+.log time, .log .src { font: 400 12px/1.5 var(--mono); }
 .log time { color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .log .src { color: var(--ink-3); }
-.log .t { text-wrap: pretty; }
-
-/* Elsewhere tile */
-.links { display: grid; }
-.links a {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 0;
-  font: 400 13px/1.5 var(--mono);
-}
+.log .t { font-size: 15px; line-height: 1.45; text-wrap: pretty; }
 
 /* Panels below the first screen: a label cell, then the body. */
-.panel { margin-top: 72px; }
-.cell-label { grid-column: 1 / span 3; }
-.cell-label { padding-top: 28px; }
+.panel { margin-top: var(--gap); }
+.cell-label { grid-column: 1 / span 3; padding-top: 28px; }
 .cell-body { grid-column: 4 / span 9; padding: 28px 32px 32px; }
-.sec-title {
-  display: flex;
-  gap: 8px;
-  font: 400 12px/1.5 var(--mono);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
+.sec-title { color: var(--ink); letter-spacing: 0.1em; text-transform: uppercase; }
 
 .statement {
-  font-size: clamp(1.125rem, 1rem + 0.4vw, 1.3125rem);
-  line-height: 1.5;
+  font-size: 22px;
+  line-height: 1.45;
   letter-spacing: -0.008em;
   max-width: 34em;
   text-wrap: pretty;
 }
 
-/* Work */
-.work { display: grid; gap: 32px; }
-.work-name {
-  font: 400 12px/1.5 var(--mono);
-  color: var(--ink-2);
-  letter-spacing: 0.02em;
-  margin-bottom: 14px;
+/* How I work: the claim, its test run, then the product itself. */
+.proof { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; }
+.tests {
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
-.work .tile-links { padding-top: 20px; }
-.shot { display: block; }
-.shot figure {
-  border: 1px solid var(--line);
-  background: var(--ground);
-  transition: transform 220ms var(--ease-out);
-}
-.shot img { display: block; width: 100%; height: auto; }
-.shot figcaption {
-  padding: 10px 12px;
-  font: 400 11px/1 var(--mono);
-  letter-spacing: 0.04em;
-  color: var(--ink-2);
-}
-.shot figcaption::after { content: " ↗"; }
+.testlog .file { margin-bottom: 10px; }
+.tests .cmd { color: var(--ink-2); }
+.tests .ok { font-weight: 500; }
+.media { display: grid; gap: 10px; }
+.media img, .media video { display: block; width: 100%; height: auto; background: var(--ground); }
+.media a { display: block; transition: transform 220ms var(--ease-out); }
+.media-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 
 /* About: story beside a small spec column; the optional photo takes a third column. */
 .about {
@@ -341,30 +321,29 @@ pre, code { font-family: var(--mono); }
   background: var(--ground);
 }
 .about-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.story { display: grid; gap: 1em; max-width: 36em; font-size: 17px; line-height: 1.6; }
+.story { display: grid; gap: 1em; max-width: 36em; }
 .spec {
-  font: 400 12.5px/1.6 var(--mono);
+  font: 400 14px/1.6 var(--mono);
   color: var(--ink-2);
   display: grid;
   gap: 20px;
 }
-.spec dt { color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; margin-bottom: 6px; }
+.spec dt { font-size: 12px; color: var(--ink-3); margin-bottom: 6px; }
 .spec dd { color: var(--ink); }
 
 /* Footer */
-.foot { margin-top: 72px; margin-bottom: 72px; }
+.foot { margin-bottom: 72px; }
 .foot .cell-label { padding-top: 20px; }
-.foot .cell-body { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 32px; padding: 20px 22px 22px; }
+.foot .cell-body { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 32px; padding: 20px var(--inset) 22px; }
 .foot-links {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 24px;
-  font: 400 12px/1.5 var(--mono);
-  letter-spacing: 0.04em;
+  font: 400 14px/1.5 var(--mono);
 }
 .foot-links a { padding: 4px 0; }
 .foot-name {
-  font: 500 11px/1.5 var(--mono);
+  font: 500 12px/1.5 var(--mono);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-3);
@@ -373,10 +352,10 @@ pre, code { font-family: var(--mono); }
 
 /* Hover only where there is a real pointer. */
 @media (hover: hover) and (pointer: fine) {
-  .tile-links a:hover, .links a:hover, .foot-links a:hover, .nav a:hover, .log a:hover .t, .foot-name a:hover { text-decoration-color: currentColor; }
-  .tile-links a:hover::after, .links a:hover::after, .foot-links a:hover::after { transform: translate(2px, -2px); color: var(--ink); }
+  .tile-links a:hover, .foot-links a:hover, .nav a:hover, .log a:hover .t, .foot-name a:hover, .media a:hover + figcaption { text-decoration-color: currentColor; }
+  .tile-links a:hover::after, .foot-links a:hover::after { transform: translate(2px, -2px); color: var(--ink); }
   .log a:hover { background: var(--ground); }
-  .shot:hover figure { transform: translateY(-3px); }
+  .media a:hover { transform: translateY(-3px); }
   .swap:hover { color: var(--ink); text-decoration-color: currentColor; }
 }
 
@@ -392,31 +371,29 @@ pre, code { font-family: var(--mono); }
 
 @media (max-width: 1099px) {
   .bento, .panel { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  .tile-role, .tile-cloakroom, .tile-writing { grid-column: 1 / -1; }
-  .tile-stack { grid-column: 1 / span 3; }
-  .tile-elsewhere { grid-column: 4 / span 3; }
-  .tile-writing { order: 3; }
+  .tile-role, .tile-cloakroom, .tile-stack, .tile-writing { grid-column: 1 / -1; grid-row: auto; }
+  .tile-role { min-height: 0; }
   .cell-label { grid-column: 1 / -1; padding-bottom: 18px; }
   .cell-body { grid-column: 1 / -1; }
 }
 
 @media (max-width: 699px) {
-  :root { --frame: 6px; }
-  .bar { flex-direction: column; align-items: flex-start; gap: 18px; padding-top: 28px; padding-bottom: 22px; }
-  .nav { display: grid; grid-template-columns: auto auto; gap: 6px 28px; }
+  :root { --frame: 6px; --inset: 18px; --gap: 72px; }
+  .bar { flex-direction: column; align-items: stretch; gap: 18px; padding-top: 28px; padding-bottom: 22px; }
+  .nav { justify-content: space-between; gap: 0; letter-spacing: 0.04em; }
+  .nav a { gap: 5px; }
   .bento, .panel { grid-template-columns: minmax(0, 1fr); }
   .bento > *, .panel > * { grid-column: 1 / -1; }
-  .tile, .cell { padding: 18px 18px 20px; }
-  .cell-body { padding: 22px 18px 24px; }
-  .lead { padding-top: 36px; }
+  .tile, .cell { padding: 18px var(--inset) 20px; }
+  .cell-body { padding: 22px var(--inset) 24px; }
+  .lead, .statement { font-size: 20px; }
   .log a { grid-template-columns: 11ch minmax(0, 1fr); }
   .log .t { grid-column: 1 / -1; }
-  .panel, .foot { margin-top: 48px; }
   .foot { margin-bottom: 48px; }
   .about, .about:has(.about-photo) { grid-template-columns: minmax(0, 1fr); }
   .about-photo { max-width: 11rem; }
-  .shot img { aspect-ratio: 16 / 10; object-fit: cover; object-position: 0 0; }
-  .story { font-size: 16px; }
+  .media-pair { grid-template-columns: minmax(0, 1fr); }
+  .tests { white-space: pre; overflow-wrap: normal; overflow-x: auto; padding-bottom: 6px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

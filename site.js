@@ -18,6 +18,17 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
+  // The recorded run plays, muted, only while it is on screen. Reduced motion keeps the poster frame.
+  var run = document.querySelector('video.run');
+  if (run && !still && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { run.preload = 'auto'; run.play().catch(function () {}); }
+        else run.pause();
+      });
+    }, { threshold: 0.25 }).observe(run);
+  }
+
   var pane = document.querySelector('[data-swap]');
   if (!pane) return;
   var marks = pane.querySelectorAll('mark');
