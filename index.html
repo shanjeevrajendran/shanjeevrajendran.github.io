@@ -4,83 +4,187 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shanjeev Rajendran</title>
-<meta name="description" content="Data platform architect. I built Cloakroom, an open-source plugin that keeps secrets and personal data out of Claude Code.">
+<meta name="description" content="I build data platforms, and I run AI assistants on real work. The tools I ship come out of what breaks.">
 <link rel="canonical" href="https://shanjeevrajendran.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Shanjeev Rajendran">
-<meta property="og:description" content="Data platform architect. I built Cloakroom, an open-source plugin that keeps secrets and personal data out of Claude Code.">
+<meta property="og:description" content="I build data platforms, and I run AI assistants on real work. The tools I ship come out of what breaks.">
 <meta property="og:url" content="https://shanjeevrajendran.github.io/">
 <meta name="color-scheme" content="light dark">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a7f37'/%3E%3Ctext x='16' y='21.5' font-family='system-ui,sans-serif' font-size='15' font-weight='700' text-anchor='middle' fill='white'%3ESR%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#ececea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23141414'/%3E%3Crect x='6' y='20' width='20' height='6' fill='%23ff4f00'/%3E%3C/svg%3E">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Shanjeev Rajendran","url":"https://shanjeevrajendran.github.io/","jobTitle":"Data platform architect","address":{"@type":"PostalAddress","addressLocality":"Charlotte","addressRegion":"NC","addressCountry":"US"},"sameAs":["https://github.com/shanjeevrajendran","https://www.linkedin.com/in/shanjeevrajendran","https://x.com/Shanjv05","https://bsky.app/profile/shanjeev.bsky.social","https://dev.to/shanjeev_rajendran","https://medium.com/@shanjeev","https://shanjeev.hashnode.dev"]}
+{"@context":"https://schema.org","@type":"Person","name":"Shanjeev Rajendran","url":"https://shanjeevrajendran.github.io/","jobTitle":"Data platform architect","description":"I build data platforms, and I run AI assistants on real work. The tools I ship come out of what breaks.","address":{"@type":"PostalAddress","addressLocality":"Charlotte","addressRegion":"NC","addressCountry":"US"},"sameAs":["https://github.com/shanjeevrajendran","https://www.linkedin.com/in/shanjeevrajendran","https://x.com/Shanjv05","https://bsky.app/profile/shanjeev.bsky.social","https://dev.to/shanjeev_rajendran","https://medium.com/@shanjeev","https://shanjeev.hashnode.dev"]}
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="bar">
-  <div class="bar-inner">
-    <a class="brand" href="#top" aria-label="Shanjeev Rajendran, top of page">SR</a>
-    <nav aria-label="Primary">
-      <a href="#now">Projects</a>
-      <a href="#background">Background</a>
-      <a href="#writing">Writing</a>
-    </nav>
-  </div>
+<header class="bar" id="top">
+  <h1 class="name"><a href="#top">Shanjeev Rajendran</a></h1>
+  <nav class="nav" aria-label="Primary">
+    <a href="#work"><span class="n">01</span>Work</a>
+    <a href="#writing"><span class="n">02</span>Writing</a>
+    <a href="#about"><span class="n">03</span>About</a>
+    <a href="#elsewhere"><span class="n">04</span>Elsewhere</a>
+  </nav>
 </header>
+
 <main id="main">
-  <section class="hero" id="top">
-    <h1 class="display">Shanjeev Rajendran</h1>
-    <p class="lede">Data platform architect. I built Cloakroom, an open-source plugin that keeps secrets and personal data out of Claude Code.</p>
-    <p class="hero-links"><a href="https://github.com/shanjeevrajendran/cloakroom">Cloakroom on GitHub</a> · <a href="https://cloakroom.sh/">How it works</a> · <a href="https://www.linkedin.com/in/shanjeevrajendran">LinkedIn</a></p>
+  <section class="bento" aria-label="Overview">
+
+    <div class="tile tile-role" data-reveal style="--d:0ms">
+      <p class="role"><span class="nb">Data platforms ·</span> <span class="nb">AI assistants ·</span> <span class="nb">Open source</span></p>
+      <p class="role role-2"><span class="nb">Charlotte, North Carolina ·</span> <span class="nb">Fourteen years in IT</span></p>
+      <p class="lead">I build data platforms, and I run AI assistants on real work. The tools I ship come out of what breaks.</p>
+    </div>
+
+    <article class="tile tile-cloakroom" aria-labelledby="cloakroom-tile-title" data-reveal style="--d:70ms">
+      <header class="tile-head">
+        <h2 class="file" id="cloakroom-tile-title">Building now: Cloakroom</h2>
+      </header>
+      <p class="tile-text">Cloakroom, a free open-source plugin that keeps API keys and personal data out of Claude Code's view.</p>
+      <div class="sample">
+        <figure class="pane">
+          <figcaption>On disk</figcaption>
+<pre><code><span class="ln"><span class="real">Nadia Petrov</span> called about a double charge. Reach her at <span class="real">nadia.petrov@quillmere.net</span>, <span class="real">18 Larkspur Lane, Charlotte NC</span>.</span>
+<span class="ln">DATABASE_URL=postgres://admin:<span class="real">Hunter2x9</span>@10.0.4.12/prod</span></code></pre>
+        </figure>
+        <figure class="pane pane-seen" data-swap>
+          <figcaption><span>What the agent sees</span><button type="button" class="swap" aria-pressed="false" hidden>Show real values</button></figcaption>
+<pre><code><span class="ln"><mark><span class="r">Nadia Petrov</span><span class="p">PII_PERSON_1</span></mark> called about a double charge. Reach her at <mark><span class="r">nadia.petrov@quillmere.net</span><span class="p">PII_EMAIL_1</span></mark>, <mark><span class="r">18 Larkspur Lane, Charlotte NC</span><span class="p">PII_ADDRESS_1</span></mark>.</span>
+<span class="ln">DATABASE_URL=postgres://admin:<mark><span class="r">Hunter2x9</span><span class="p">PII_SECRET_1</span></mark>@10.0.4.12/prod</span></code></pre>
+        </figure>
+      </div>
+      <p class="tile-links">
+        <a href="https://cloakroom.sh/">cloakroom.sh</a>
+        <a href="https://github.com/shanjeevrajendran/cloakroom">Source</a>
+        <a href="https://pypi.org/project/cloakroom/">PyPI</a>
+      </p>
+    </article>
+
+    <div class="tile tile-stack" data-reveal style="--d:140ms">
+      <header class="tile-head"><h2 class="file">stack.yml</h2></header>
+<pre class="code"><code><span class="k">data_platforms</span>:
+  <span class="d">-</span> Snowflake
+  <span class="d">-</span> dbt
+  <span class="d">-</span> Airflow
+  <span class="d">-</span> Python
+  <span class="d">-</span> AWS
+<span class="k">ai_assistants</span>:
+  <span class="d">-</span> Claude Code</code></pre>
+    </div>
+
+    <div class="tile tile-writing" id="writing" data-reveal style="--d:210ms">
+      <header class="tile-head"><h2 class="file">writing.log</h2></header>
+      <ol class="log">
+        <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7522873173592133632/"><time datetime="2026-11-01">2026-11-01</time><span class="src">LinkedIn</span><span class="t">Apple's Illusion of Thinking: the paper is right, the lesson is wrong</span></a></li>
+        <li><a href="https://dev.to/shanjeev_rajendran/what-cloakroom-would-and-wouldnt-have-done-in-octobers-incidents-45h"><time datetime="2026-10-28">2026-10-28</time><span class="src">dev.to</span><span class="t">What Cloakroom would and wouldn't have done in October's incidents</span></a></li>
+        <li><a href="https://medium.com/@shanjeev/keep-your-secrets-and-personal-data-away-from-your-coding-agent-e07d4cef0c5a"><time datetime="2026-10-25">2026-10-25</time><span class="src">Medium</span><span class="t">Keep your secrets and personal data away from your coding agent</span></a></li>
+        <li><a href="https://cloakroom.sh/"><time datetime="2026-10-15">2026-10-15</time><span class="src">cloakroom.sh</span><span class="t">How I keep secrets and personal data out of Claude Code</span></a></li>
+      </ol>
+    </div>
+
+    <nav class="tile tile-elsewhere" id="elsewhere" aria-labelledby="elsewhere-tile-title" data-reveal style="--d:280ms">
+      <header class="tile-head"><h2 class="file" id="elsewhere-tile-title">Elsewhere</h2></header>
+      <ul class="links">
+        <li><a href="https://github.com/shanjeevrajendran">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/shanjeevrajendran">LinkedIn</a></li>
+        <li><a href="https://x.com/Shanjv05">X</a></li>
+        <li><a href="https://bsky.app/profile/shanjeev.bsky.social">Bluesky</a></li>
+        <li><a href="https://dev.to/shanjeev_rajendran">dev.to</a></li>
+        <li><a href="https://medium.com/@shanjeev">Medium</a></li>
+        <li><a href="https://shanjeev.hashnode.dev">Hashnode</a></li>
+      </ul>
+    </nav>
+
   </section>
 
-  <section class="block" id="now">
-    <h2 class="section-title">Projects</h2>
-    <div class="card">
-      <p><strong>Cloakroom</strong>, an open-source plugin for Claude Code. It replaces secrets and personal data with placeholders before the model sees them, then restores the real values in what Claude writes. It runs on your machine and learns from your corrections.</p>
-      <p class="links"><a href="https://github.com/shanjeevrajendran/cloakroom">Source</a> · <a href="https://cloakroom.sh/">How it works</a></p>
+  <section class="panel" id="work" aria-labelledby="work-title">
+    <div class="cell cell-label" data-reveal>
+      <h2 class="sec-title" id="work-title"><span class="n">01</span>Work</h2>
+    </div>
+    <div class="cell cell-body" data-reveal style="--d:70ms">
+      <div class="work">
+        <div class="work-text">
+          <h3 class="work-name">Building now: Cloakroom</h3>
+          <p class="statement">Your agent reads your files. Some of them hold passwords, keys and customer names. Cloakroom swaps those for placeholders on your machine before the model sees them, then puts the real values back in the files the model writes. It learns from your corrections.</p>
+          <p class="tile-links">
+            <a href="https://cloakroom.sh/">cloakroom.sh</a>
+            <a href="https://github.com/shanjeevrajendran/cloakroom">Source</a>
+            <a href="https://pypi.org/project/cloakroom/">PyPI</a>
+          </p>
+        </div>
+        <a class="shot" href="https://cloakroom.sh/" aria-label="Cloakroom's demo on cloakroom.sh">
+          <figure>
+            <img src="img/cloakroom-demo.jpg" width="1600" height="470" loading="lazy" decoding="async" alt="Cloakroom's demo: a support note and a config line as they sit on disk, with a name, an email, an address and a password, then the same lines as the agent sees them, with each value replaced by a placeholder such as PII_PERSON_1.">
+            <figcaption>cloakroom.sh</figcaption>
+          </figure>
+        </a>
+      </div>
     </div>
   </section>
 
-  <section class="block" id="background">
-    <h2 class="section-title">Background</h2>
-    <p>Fourteen years building enterprise data platforms, based in Charlotte.</p>
-    <ul class="facts">
-      <li><strong>Before:</strong> Tata Consultancy Services, Mercedes-Benz R&amp;D, Accenture, Altimetrik</li>
-      <li><strong>Work:</strong> metadata-driven frameworks on Snowflake, dbt, Airflow and AWS that replace source-by-source engineering with configuration, plus the CI/CD and testing around them</li>
-      <li><strong>Credentials:</strong> SnowPro Core, CKAD, B.E. Mechanical Engineering (Anna University)</li>
-    </ul>
-    <p>The two halves connect: the data that must never leave a bank's platform is the same kind of data people paste into AI tools. Cloakroom came from that.</p>
+  <section class="panel" id="how" aria-labelledby="how-title">
+    <div class="cell cell-label" data-reveal>
+      <h2 class="sec-title" id="how-title">How I work</h2>
+    </div>
+    <div class="cell cell-body" data-reveal style="--d:70ms">
+      <p class="statement">I keep a list of what gets in the way when AI assistants do real work. I check whether someone already fixed it. I build only where nothing fits, and every tool ships with a test you can rerun.</p>
+    </div>
   </section>
 
-  <section class="block" id="how">
-    <h2 class="section-title">How I work</h2>
-    <p>I keep a list of what gets in the way when I use AI tools, check it against what already exists, and build only where nothing fits. Each project ships with a benchmark you can rerun.</p>
-  </section>
-
-  <section class="block" id="writing">
-    <h2 class="section-title">Writing</h2>
-    <ul>
-      <li><a href="https://cloakroom.sh/">How I keep secrets and personal data out of Claude Code</a> (the design write-up for Cloakroom)</li>
-      <li><a href="https://dev.to/shanjeev_rajendran/how-i-keep-secrets-and-personal-data-out-of-claude-code-61n">How I keep secrets and personal data out of Claude Code</a> (dev.to)</li>
-      <li><a href="https://dev.to/shanjeev_rajendran/what-cloakroom-would-and-wouldnt-have-done-in-octobers-incidents-45h">What Cloakroom would and wouldn't have done in October's incidents</a> (dev.to)</li>
-      <li><a href="https://medium.com/@shanjeev/keep-your-secrets-and-personal-data-away-from-your-coding-agent-e07d4cef0c5a">Keep your secrets and personal data away from your coding agent</a> (Medium)</li>
-    </ul>
+  <section class="panel" id="about" aria-labelledby="about-title">
+    <div class="cell cell-label" data-reveal>
+      <h2 class="sec-title" id="about-title"><span class="n">03</span>About</h2>
+    </div>
+    <div class="cell cell-body" data-reveal style="--d:70ms">
+      <div class="about">
+        <!-- About photo slot. Save the picture as img/about.jpg (portrait, about 4:5, at least 640 x 800),
+             describe it in alt, and remove the two comment lines around the figure to show it.
+        <figure class="about-photo"><img src="img/about.jpg" width="640" height="800" loading="lazy" decoding="async" alt=""></figure>
+        -->
+        <div class="story">
+          <p>I live in Charlotte, North Carolina. I've worked in IT for fourteen years, most of it building data platforms for aviation, banking, telecom, hospitality and retail.</p>
+          <p>I like building things, and I find it hard to leave a working thing alone. A pipeline that runs should run without anyone watching it. A query that works can usually cost less. I go back over my own work more often than anyone asks me to.</p>
+          <p>Cloakroom started as a home project. I was setting up an AI model to run on my own machine, because I wanted my files to stay private. I wanted the same privacy when I used Claude Code, and nothing did it the way I needed. So I built it, and made it open source.</p>
+        </div>
+        <aside class="spec" aria-label="Stack and credentials">
+          <p>Most days I work in Snowflake, dbt, Airflow, Python and AWS.</p>
+          <dl>
+            <dt>Credentials</dt>
+            <dd>SnowPro Core</dd>
+            <dd>CKAD</dd>
+            <dd>B.E. Mechanical Engineering (Anna University)</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
   </section>
 </main>
-<footer class="foot">
-  <nav aria-label="Elsewhere">
-    <span class="label">Elsewhere</span>
-    <a href="https://github.com/shanjeevrajendran">GitHub</a>
-    <a href="https://www.linkedin.com/in/shanjeevrajendran">LinkedIn</a>
-    <a href="https://x.com/Shanjv05">X</a>
-    <a href="https://bsky.app/profile/shanjeev.bsky.social">Bluesky</a>
-    <a href="https://dev.to/shanjeev_rajendran">dev.to</a>
-    <a href="https://medium.com/@shanjeev">Medium</a>
-    <a href="https://shanjeev.hashnode.dev">Hashnode</a>
-  </nav>
+
+<footer class="panel foot" aria-labelledby="foot-title">
+  <div class="cell cell-label">
+    <h2 class="sec-title" id="foot-title">Elsewhere</h2>
+  </div>
+  <div class="cell cell-body">
+    <nav class="foot-links" aria-labelledby="foot-title">
+      <a href="https://github.com/shanjeevrajendran">GitHub</a>
+      <a href="https://www.linkedin.com/in/shanjeevrajendran">LinkedIn</a>
+      <a href="https://x.com/Shanjv05">X</a>
+      <a href="https://bsky.app/profile/shanjeev.bsky.social">Bluesky</a>
+      <a href="https://dev.to/shanjeev_rajendran">dev.to</a>
+      <a href="https://medium.com/@shanjeev">Medium</a>
+      <a href="https://shanjeev.hashnode.dev">Hashnode</a>
+    </nav>
+    <p class="foot-name"><a href="#top">Shanjeev Rajendran</a></p>
+  </div>
 </footer>
+<script src="site.js" defer></script>
 </body>
 </html>
