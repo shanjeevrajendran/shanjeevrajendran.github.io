@@ -227,6 +227,13 @@ pre, code { font-family: var(--mono); }
 .swap:active { transform: scale(0.97); }
 .swap:disabled { opacity: 0.5; cursor: default; }
 
+.sample-note {
+  margin-top: 12px;
+  font: 400 12px/1.5 var(--mono);
+  letter-spacing: 0.02em;
+  color: var(--ink-3);
+}
+
 .tile-links {
   margin-top: auto;
   padding-top: 24px;
