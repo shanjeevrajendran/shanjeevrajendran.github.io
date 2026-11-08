@@ -305,7 +305,6 @@ pre, code { font-family: var(--mono); }
 .media { display: grid; gap: 10px; }
 .media img, .media video { display: block; width: 100%; height: auto; background: var(--ground); }
 .media a { display: block; transition: transform 220ms var(--ease-out); }
-.media-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 
 /* About: story beside a small spec column; the optional photo takes a third column. */
 .about {
@@ -392,7 +391,6 @@ pre, code { font-family: var(--mono); }
   .foot { margin-bottom: 48px; }
   .about, .about:has(.about-photo) { grid-template-columns: minmax(0, 1fr); }
   .about-photo { max-width: 11rem; }
-  .media-pair { grid-template-columns: minmax(0, 1fr); }
   .tests { white-space: pre; overflow-wrap: normal; overflow-x: auto; padding-bottom: 6px; }
 }
 
