@@ -291,17 +291,8 @@ pre, code { font-family: var(--mono); }
   text-wrap: pretty;
 }
 
-/* How I work: the claim, its test run, then the product itself. */
+/* Cloakroom in use: the claim, the recorded run, the links. */
 .proof { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; }
-.tests {
-  font-size: 14px;
-  line-height: 1.7;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-}
-.testlog .file { margin-bottom: 10px; }
-.tests .cmd { color: var(--ink-2); }
-.tests .ok { font-weight: 500; }
 .media { display: grid; gap: 10px; }
 .media img, .media video { display: block; width: 100%; height: auto; background: var(--ground); }
 .media a { display: block; transition: transform 220ms var(--ease-out); }
@@ -391,7 +382,6 @@ pre, code { font-family: var(--mono); }
   .foot { margin-bottom: 48px; }
   .about, .about:has(.about-photo) { grid-template-columns: minmax(0, 1fr); }
   .about-photo { max-width: 11rem; }
-  .tests { white-space: pre; overflow-wrap: normal; overflow-x: auto; padding-bottom: 6px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

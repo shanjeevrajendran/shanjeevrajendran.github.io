@@ -88,29 +88,34 @@
 
   </section>
 
+  <section class="panel" id="cloakroom" aria-labelledby="cloakroom-title">
+    <div class="cell cell-label" data-reveal>
+      <h2 class="sec-title" id="cloakroom-title">Cloakroom in use</h2>
+    </div>
+    <div class="cell cell-body" data-reveal style="--d:70ms">
+      <div class="proof">
+        <p class="statement">Your agent reads your files. Some of them hold passwords, keys and customer names. Cloakroom swaps those for placeholders on your machine before the model sees them, then puts the real values back in the files the model writes. It learns from your corrections.</p>
+        <figure class="media media-run">
+          <video class="run" width="1200" height="676" muted loop playsinline preload="none" poster="img/cloakroom-run-poster.jpg" aria-label="A recorded Claude Code run with Cloakroom: Claude reads a support ticket and a .env file and sees placeholders, while the files on disk keep the real name, email, phone, address and Stripe key; the reply Claude writes gets the real name back on disk.">
+            <source src="img/cloakroom-run.mp4" type="video/mp4">
+          </video>
+          <figcaption>A recorded Claude Code run. Left: what Claude sees. Right: what stays on your disk.</figcaption>
+        </figure>
+        <p class="tile-links">
+          <a href="https://cloakroom.sh/">cloakroom.sh</a>
+          <a href="https://github.com/shanjeevrajendran/cloakroom">Source</a>
+          <a href="https://pypi.org/project/cloakroom/">PyPI</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section class="panel" id="how" aria-labelledby="how-title">
     <div class="cell cell-label" data-reveal>
       <h2 class="sec-title" id="how-title">How I work</h2>
     </div>
     <div class="cell cell-body" data-reveal style="--d:70ms">
-      <div class="proof">
-        <p class="statement">I keep a list of what gets in the way when AI assistants do real work. I check whether someone already fixed it. I build only where nothing fits, and every tool ships with a test you can rerun.</p>
-        <div class="testlog">
-          <h3 class="file">tests.log</h3>
-<pre class="tests" tabindex="0" aria-label="tests.log"><code><span class="cmd">$ git rev-parse --short HEAD</span>
-a61c19f
-<span class="cmd">$ .venv/bin/python -m pytest -q -p no:cacheprovider</span>
-........................................................................ [  4%]
-..............................................................           [100%]
-exit 0</code></pre>
-        </div>
-        <figure class="media media-run">
-          <video class="run" width="1200" height="676" muted loop playsinline preload="none" poster="img/cloakroom-run-poster.jpg" aria-label="A recorded Claude Code run with Cloakroom: Claude reads a support ticket and a .env file and sees placeholders, while the files on disk keep the real name, email, phone, address and Stripe key; the reply Claude writes gets the real name back on disk.">
-            <source src="img/cloakroom-run.mp4" type="video/mp4">
-          </video>
-          <figcaption>A recorded Claude Code run with Cloakroom</figcaption>
-        </figure>
-      </div>
+      <p class="statement">I keep a list of what gets in the way when AI assistants do real work. I check whether someone already fixed it. I build only where nothing fits, and every tool ships with a test you can rerun.</p>
     </div>
   </section>
 
