@@ -1,175 +1,518 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="anim-a anim-b anim-c anim-d anim-e anim-f anim-g">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shanjeev Rajendran · Data platforms and AI assistants</title>
-<meta name="description" content="I build data platforms, and I run AI assistants on real work. The tools I ship come out of what breaks.">
+<meta name="description" content="The tools I ship come out of what breaks. Principal data engineer in Charlotte, North Carolina. I build data platforms and run AI assistants on real work.">
 <link rel="canonical" href="https://shanjeevrajendran.github.io/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Shanjeev Rajendran">
-<meta property="og:description" content="I build data platforms, and I run AI assistants on real work. The tools I ship come out of what breaks.">
+<meta property="og:site_name" content="Shanjeev Rajendran">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Shanjeev Rajendran · Principal Data Engineer">
+<meta property="og:description" content="The tools I ship come out of what breaks. Principal data engineer in Charlotte, North Carolina. I build data platforms and run AI assistants on real work.">
 <meta property="og:url" content="https://shanjeevrajendran.github.io/">
 <meta property="og:image" content="https://shanjeevrajendran.github.io/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The first screen of Shanjeev Rajendran's site, with a Cloakroom sample showing real values swapped for placeholders.">
+<meta property="og:image:alt" content="The first screen of Shanjeev Rajendran's site. The headline reads: The tools I ship come out of what breaks.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@Shanjv05">
+<meta name="twitter:title" content="Shanjeev Rajendran · Principal Data Engineer">
+<meta name="twitter:description" content="The tools I ship come out of what breaks. Principal data engineer in Charlotte, North Carolina. I build data platforms and run AI assistants on real work.">
+<meta name="twitter:image" content="https://shanjeevrajendran.github.io/img/og.jpg">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#ececea" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23141414'/%3E%3Crect x='6' y='20' width='20' height='6' fill='%23ff4f00'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d0d0c" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Shanjeev Rajendran","url":"https://shanjeevrajendran.github.io/","image":"https://shanjeevrajendran.github.io/img/about.jpg","jobTitle":"Principal Data Engineer","description":"I build data platforms, and I run AI assistants on real work. The tools I ship come out of what breaks.","knowsAbout":["Snowflake","dbt","Airflow","Python","AWS","data engineering"],"address":{"@type":"PostalAddress","addressLocality":"Charlotte","addressRegion":"NC","addressCountry":"US"},"sameAs":["https://github.com/shanjeevrajendran","https://www.linkedin.com/in/shanjeevrajendran","https://x.com/Shanjv05","https://bsky.app/profile/shanjeev.bsky.social","https://dev.to/shanjeev_rajendran","https://medium.com/@shanjeev","https://shanjeev.hashnode.dev"]}
+{"@context":"https://schema.org","@type":"Person","@id":"https://shanjeevrajendran.github.io/#person","name":"Shanjeev Rajendran","url":"https://shanjeevrajendran.github.io/","mainEntityOfPage":"https://shanjeevrajendran.github.io/","image":"https://shanjeevrajendran.github.io/img/about.jpg","jobTitle":"Principal Data Engineer","description":"The tools I ship come out of what breaks. Principal data engineer in Charlotte, North Carolina. I build data platforms and run AI assistants on real work.","knowsAbout":["Snowflake","dbt","Airflow","Python","AWS","data engineering"],"address":{"@type":"PostalAddress","addressLocality":"Charlotte","addressRegion":"NC","addressCountry":"US"},"sameAs":["https://github.com/shanjeevrajendran","https://www.linkedin.com/in/shanjeevrajendran","https://x.com/Shanjv05","https://bsky.app/profile/shanjeev.bsky.social","https://dev.to/shanjeev_rajendran","https://medium.com/@shanjeev","https://shanjeev.hashnode.dev"]}
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4e">
+<style>
+@font-face { font-family: "Geist"; src: url("/fonts/geist.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+/* One alignment, four type sizes, one accent: the placeholder.
+   Sizes: display (h1) · 30 headings and the statement · 18 text · 15 notes and code. */
+:root {
+  --bg: #f7f7f5;
+  --surface: #ececea;
+  --ink: #141414;
+  --muted: #55554f;
+  --accent: #ff4f00;
+  --on-accent: #141414;
+
+  --sans: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --code: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --t-display: clamp(34px, 5.6vw, 84px);
+  --t-head: 30px;
+  --t-text: 18px;
+  --t-note: 15px;
+
+  --margin: 32px;
+  --gutter: 24px;
+  --gap: 140px;
+  --bar: 68px;
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d0d0c;
+    --surface: #191918;
+    --ink: #ececea;
+    --muted: #a5a5a0;
+    --accent: #ff5a1a;
+    --on-accent: #0d0d0c;
+  }
+}
+/* Explicit dark theme values. */
+:root[data-theme="dark"] {
+  --bg: #0d0d0c;
+  --surface: #191918;
+  --ink: #ececea;
+  --muted: #a5a5a0;
+  --accent: #ff5a1a;
+  --on-accent: #0d0d0c;
+}
+@media (max-width: 899px) {
+  :root { --margin: 20px; --gap: 88px; --t-head: 24px; --bar: 60px; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--bar) + 24px); }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 var(--t-text)/1.55 var(--sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, p, figure, ul, ol, pre { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+img, video { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, video:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+.skip { position: absolute; left: var(--margin); top: -80px; z-index: 40; padding: 12px 16px; background: var(--ink); color: var(--bg); text-decoration: none; }
+.skip:focus { top: 12px; }
+
+.wrap { max-width: 1440px; margin: 0 auto; padding: 0 var(--margin); }
+
+/* Top bar: the name and the switch. Solid ground, nothing floating. */
+.bar { position: sticky; top: 0; z-index: 30; background: var(--bg); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: var(--bar); }
+.name { font-size: var(--t-text); font-weight: 500; text-decoration: none; white-space: nowrap; display: inline-flex; align-items: center; min-height: 44px; }
+
+.view { display: flex; align-items: center; gap: 12px; }
+.view-label { font-size: var(--t-note); color: var(--muted); }
+.seg { display: flex; background: var(--surface); padding: 3px; }
+.seg button {
+  font: 500 var(--t-note)/1 var(--sans);
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  min-height: 44px;
+  padding: 0 14px;
+  cursor: pointer;
+  transition: background-color 160ms var(--ease), color 160ms var(--ease), transform 120ms var(--ease);
+}
+.seg button:hover { background: color-mix(in srgb, var(--ink) 8%, transparent); }
+.seg button:active { transform: scale(0.97); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.view { flex-wrap: wrap; margin-top: 28px; }
+.nav { display: flex; gap: 4px; }
+.nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; font-size: var(--t-note); font-weight: 500; text-decoration: none; transition: background-color 160ms var(--ease); }
+.nav a:hover { background: var(--surface); }
+.nav a:last-child { margin-right: -12px; }
+@media (max-width: 519px) { .nav { gap: 0; } .nav a { padding: 0 8px; } .nav a:last-child { margin-right: 0; padding-right: 0; } .name { font-size: var(--t-note); } }
+
+/* The grid every section hangs on: a heading rail, then the content. */
+.row { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+.rail { grid-column: 1 / span 3; }
+.body { grid-column: 4 / -1; }
+@media (max-width: 899px) {
+  .row { display: block; }
+  .rail { margin-bottom: 24px; }
+}
+
+section, footer { padding-top: var(--gap); }
+h2 { font-size: var(--t-head); line-height: 1.15; font-weight: 500; letter-spacing: -0.02em; }
+.measure { max-width: 600px; }
+.measure p + p { margin-top: 1em; }
+.note { font-size: var(--t-note); color: var(--muted); line-height: 1.5; }
+
+/* First screen */
+.hero { padding-top: clamp(56px, 13vh, 132px); }
+h1 {
+  font-size: var(--t-display);
+  line-height: 1.02;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  max-width: 13.5em;
+  text-wrap: balance;
+}
+.hero .lede { margin-top: clamp(24px, 3vw, 40px); max-width: 600px; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 32px; }
+.button {
+  display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px;
+  background: var(--ink); color: var(--bg);
+  font-weight: 500; text-decoration: none;
+  transition: transform 140ms var(--ease), background-color 160ms var(--ease);
+}
+.button:hover { background: color-mix(in srgb, var(--ink) 86%, var(--bg)); }
+.button:active { transform: scale(0.98); }
+.link { display: inline-flex; align-items: center; min-height: 48px; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; transition: text-underline-offset 160ms var(--ease); }
+.link:hover { text-underline-offset: 8px; }
+.hero + section { padding-top: 110px; }
+
+/* The placeholder: the page's one accent. */
+.pii .p {
+  background: var(--accent); color: var(--on-accent);
+  padding: 0.04em 0.3em; margin: 0 -0.04em;
+  font-weight: 500; white-space: nowrap;
+  box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
+.pii [hidden] { display: none; }
+.pii.is-masked .p { animation: ph 320ms var(--ease) both; }
+@keyframes ph { from { opacity: 0; transform: translateY(0.25em); } to { opacity: 1; transform: none; } }
+
+/* Products: one entry per product, each with its own recording. The next one takes the same shape. */
+.product + .product { margin-top: 96px; }
+h3 { margin: 0 0 14px; font-size: var(--t-head); line-height: 1.15; font-weight: 500; letter-spacing: -0.02em; }
+.product-links { display: flex; flex-wrap: wrap; gap: 0 28px; margin-top: 12px; }
+.product-links a { min-height: 44px; }
+.status { margin-top: 12px; min-height: 3em; }
+
+.run { margin-top: 28px; }
+.run video { width: 100%; background: #0b0f14; aspect-ratio: 1200 / 676; }
+.run figcaption { margin-top: 14px; }
+
+/* How I work: one statement */
+.statement { font-size: var(--t-head); line-height: 1.3; letter-spacing: -0.015em; max-width: 30em; }
+
+/* Lists with two ends: Writing and Elsewhere */
+.rows a {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 32px; align-items: baseline;
+  padding: 13px 0; min-height: 52px;
+  text-decoration: none;
+  transition: color 160ms var(--ease), transform 200ms var(--ease);
+}
+.rows .t { font-weight: 500; text-wrap: balance; }
+.rows .v { font-size: var(--t-note); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; transition: color 160ms var(--ease); }
+@media (hover: hover) and (pointer: fine) {
+  .rows:hover a { color: var(--muted); }
+  .rows a:hover { color: var(--ink); transform: translateX(6px); }
+  .rows a:hover .v { color: var(--ink); }
+}
+@media (max-width: 599px) {
+  .rows a { grid-template-columns: 1fr; row-gap: 2px; }
+  .rows .v { white-space: normal; overflow-wrap: anywhere; }
+}
+
+/* About: a letter, with the portrait closing the far side */
+.about { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); column-gap: var(--gutter); align-items: start; }
+.letter { grid-column: 1 / span 6; max-width: 600px; }
+.letter p + p { margin-top: 1em; }
+.signoff { margin-top: 32px; }
+.signoff .who { font-weight: 500; display: block; }
+.portrait { grid-column: 7 / -1; overflow: hidden; }
+.portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform 900ms var(--ease); }
+@media (hover: hover) and (pointer: fine) { .portrait:hover img { transform: scale(1.03); } }
+@media (max-width: 899px) {
+  .about { display: flex; flex-direction: column; }
+  .portrait { order: -1; width: 220px; margin-bottom: 28px; }
+}
+
+/* Close */
+.close { padding: 96px 0 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+.close a { text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+.close span { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* Headline lines */
+h1 .line { display: block; overflow: hidden; padding-bottom: 0.14em; margin-bottom: -0.14em; }
+h1 .line > span { display: block; }
+.brk { display: inline-block; transform-origin: 0 88%; }
+
+/* Animations A to G are always on. */
+/* A: the headline rises into place one line at a time. */
+.anim-a h1[data-reveal] { opacity: 1; transform: none; transition: none; }
+.anim-a h1 .line > span { animation: rise 900ms var(--ease) both; }
+.anim-a h1 .line + .line > span { animation-delay: 120ms; }
+@keyframes rise { from { transform: translateY(112%); } to { transform: none; } }
+/* B: section names stay pinned while their section scrolls. */
+@media (min-width: 900px) { .anim-b .rail { position: sticky; top: calc(var(--bar) + 24px); align-self: start; } }
+/* C: the last word tips over once and stays that way. */
+.anim-c .brk { animation: tip 700ms cubic-bezier(0.3, 1.7, 0.5, 1) 1300ms both; }
+@keyframes tip { from { transform: none; } to { transform: rotate(5deg) translateY(0.03em); } }
+/* D: one orange line runs down the page when the view changes; names swap as it passes. */
+.scan { position: fixed; left: 0; right: 0; top: 0; height: 3px; background: var(--accent); z-index: 35; pointer-events: none; animation: scan 900ms linear both; }
+@keyframes scan { to { transform: translateY(100vh); } }
+
+/* E: the How I work statement fills with ink, sentence by sentence, as it scrolls up the screen. Browsers without scroll-driven animation show it in full ink. */
+@supports (animation-timeline: view()) {
+  .anim-e .statement .s { animation: ink linear both; animation-timeline: view(); animation-range: cover 12% cover 34%; }
+  .anim-e .statement .s:nth-child(2) { animation-range: cover 20% cover 40%; }
+  .anim-e .statement .s:nth-child(3) { animation-range: cover 26% cover 46%; }
+}
+@keyframes ink { from { opacity: 0.2; } to { opacity: 1; } }
+/* F: the portrait and the recording wipe in from the top as they enter. */
+.js.anim-f .portrait[data-reveal], .js.anim-f .run[data-reveal] { opacity: 1; transform: none; clip-path: inset(0 0 100% 0); transition: clip-path 1100ms var(--ease); }
+.js.anim-f .portrait[data-reveal].is-in, .js.anim-f .run[data-reveal].is-in { clip-path: inset(0 0 0 0); }
+.js.anim-f .portrait img { transform: scale(1.12); transition: transform 1500ms var(--ease); }
+.js.anim-f .portrait.is-in img { transform: none; }
+@media (hover: hover) and (pointer: fine) { .js.anim-f .portrait.is-in:hover img { transform: scale(1.03); } }
+/* G: the method, traced for one product. Three steps light up in turn. */
+.trace-intro, .trace { display: none; }
+.anim-g .trace-intro { display: block; margin-top: 56px; }
+.anim-g .trace { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: 28px; margin-top: 18px; max-width: 30em; font-size: var(--t-text); }
+.statement + .trace-intro + .trace { max-width: none; }
+.trace li { position: relative; padding-top: 18px; --w: 0ms; }
+.trace li:nth-child(2) { --w: 420ms; }
+.trace li:nth-child(3) { --w: 840ms; }
+.trace li::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--ink); transform-origin: 0 50%; }
+.trace .k { display: block; font-size: var(--t-note); color: var(--muted); margin-bottom: 4px; }
+.trace .d { display: block; max-width: 17em; }
+.js.anim-g .trace li::before { transform: scaleX(0); transition: transform 560ms var(--ease) var(--w); }
+.js.anim-g .trace li > span { opacity: 0.2; transition: opacity 420ms ease var(--w); }
+.js.anim-g .trace.is-in li::before { transform: none; }
+.js.anim-g .trace.is-in li > span { opacity: 1; }
+@media (max-width: 899px) { .anim-g .trace { grid-template-columns: 1fr; } }
+
+/* Entrances: each part of a section rises once. Content stays visible without the script. */
+.js [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity 620ms var(--ease) var(--d, 0ms), transform 620ms var(--ease) var(--d, 0ms); }
+.js [data-reveal].is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .pii.is-masked .p { animation: none; }
+  .anim-a h1 .line > span, .anim-c .brk, .anim-e .statement .s { animation: none; }
+  .js.anim-f .portrait[data-reveal], .js.anim-f .run[data-reveal] { clip-path: none; transition: none; }
+  .js.anim-f .portrait img { transform: none; transition: none; }
+  .js.anim-g .trace li::before, .js.anim-g .trace li > span { transform: none; opacity: 1; transition: none; }
+  .scan { display: none; }
+  .portrait img, .rows a, .button, .seg button { transition: none; }
+}
+@media print {
+  .bar { position: static; }
+  .view, .run video { display: none; }
+  .js [data-reveal] { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  .statement .s, .trace li > span { opacity: 1 !important; animation: none !important; }
+  .trace li::before { transform: none !important; }
+  .portrait img { transform: none !important; }
+}
+</style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="bar" id="top">
-  <h1 class="name"><a href="#top">Shanjeev Rajendran</a></h1>
-  <nav class="nav" aria-label="Primary">
-    <a href="#work"><span class="n">01</span>Work</a>
-    <a href="#writing"><span class="n">02</span>Writing</a>
-    <a href="#about"><span class="n">03</span>About</a>
-    <a href="#elsewhere"><span class="n">04</span>Elsewhere</a>
-  </nav>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="name" href="#top"><span class="pii"><span class="r">Shanjeev Rajendran</span><span class="p" hidden>PII_PERSON_1</span></span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#products">Products</a>
+      <a href="#writing">Writing</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
 </header>
 
 <main id="main">
-  <section class="bento" aria-label="Overview">
+  <div class="wrap" id="top">
 
-    <div class="tile tile-role" data-reveal style="--d:0ms">
-      <p class="role"><span class="nb">Data platforms ·</span> <span class="nb">AI assistants ·</span> <span class="nb">Open source</span></p>
-      <p class="role role-2"><span class="nb">Charlotte, North Carolina ·</span> <span class="nb">In IT since 2012</span></p>
-      <p class="lead">I build data platforms, and I run AI assistants on real work. The tools I ship come out of what breaks.</p>
-    </div>
-
-    <article class="tile tile-cloakroom" id="work" aria-labelledby="cloakroom-tile-title" data-reveal style="--d:70ms">
-      <header class="tile-head">
-        <h2 class="file" id="cloakroom-tile-title"><span class="n">01</span>Building now: Cloakroom</h2>
-      </header>
-      <p class="tile-text">Cloakroom, a free open-source plugin that keeps API keys and personal data out of Claude Code's view.</p>
-      <div class="sample">
-        <figure class="pane">
-          <figcaption>On disk</figcaption>
-<pre><code><span class="ln"><span class="real">Nadia Petrov</span> called about a double charge. Reach her at <span class="real">nadia.petrov@quillmere.net</span>, <span class="real">18 Larkspur Lane, Charlotte NC</span>.</span>
-<span class="ln">DATABASE_URL=postgres://admin:<span class="real">Hunter2x9</span>@10.0.4.12/prod</span></code></pre>
-        </figure>
-        <figure class="pane pane-seen" data-swap>
-          <figcaption><span>What the agent sees</span><button type="button" class="swap" aria-pressed="false" hidden>Show real values</button></figcaption>
-<pre><code><span class="ln"><mark><span class="r">Nadia Petrov</span><span class="p">PII_PERSON_1</span></mark> called about a double charge. Reach her at <mark><span class="r">nadia.petrov@quillmere.net</span><span class="p">PII_EMAIL_1</span></mark>, <mark><span class="r">18 Larkspur Lane, Charlotte NC</span><span class="p">PII_ADDRESS_1</span></mark>.</span>
-<span class="ln">DATABASE_URL=postgres://admin:<mark><span class="r">Hunter2x9</span><span class="p">PII_SECRET_1</span></mark>@10.0.4.12/prod</span></code></pre>
-        </figure>
-      </div>
-      <p class="sample-note">Sample text. The name, email, address and password are made up.</p>
-      <p class="tile-links">
-        <a href="https://cloakroom.sh/">cloakroom.sh</a>
-        <a href="https://github.com/shanjeevrajendran/cloakroom">Source</a>
-        <a href="https://pypi.org/project/cloakroom/">PyPI</a>
-      </p>
-    </article>
-
-    <div class="tile tile-stack" data-reveal style="--d:140ms">
-      <header class="tile-head"><h2 class="file">stack.yml</h2></header>
-<pre class="code"><code><span class="k">data_platforms</span>:
-  <span class="d">[</span>Snowflake<span class="d">,</span> dbt<span class="d">,</span> Airflow<span class="d">,</span> Python<span class="d">,</span> AWS<span class="d">]</span>
-<span class="k">ai_assistants</span>:
-  <span class="d">[</span>Claude Code<span class="d">,</span> Codex CLI<span class="d">,</span>
-   Gemini CLI<span class="d">,</span> Cursor<span class="d">]</span></code></pre>
-    </div>
-
-    <div class="tile tile-writing" id="writing" data-reveal style="--d:210ms">
-      <header class="tile-head"><h2 class="file"><span class="n">02</span>writing.log</h2></header>
-      <ol class="log">
-        <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7522873173592133632/"><time datetime="2026-11-01">2026-11-01</time><span class="src">LinkedIn</span><span class="t">Apple's Illusion of Thinking: the paper is right, the lesson is wrong</span></a></li>
-        <li><a href="https://dev.to/shanjeev_rajendran/what-cloakroom-would-and-wouldnt-have-done-in-octobers-incidents-45h"><time datetime="2026-10-28">2026-10-28</time><span class="src">dev.to</span><span class="t">What Cloakroom would and wouldn't have done in October's incidents</span></a></li>
-        <li><a href="https://medium.com/@shanjeev/keep-your-secrets-and-personal-data-away-from-your-coding-agent-e07d4cef0c5a"><time datetime="2026-10-25">2026-10-25</time><span class="src">Medium</span><span class="t">Keep your secrets and personal data away from your coding agent</span></a></li>
-        <li><a href="https://cloakroom.sh/"><time datetime="2026-10-15">2026-10-15</time><span class="src">cloakroom.sh</span><span class="t">How I keep secrets and personal data out of Claude Code</span></a></li>
-      </ol>
-    </div>
-
-  </section>
-
-  <section class="panel" id="cloakroom" aria-labelledby="cloakroom-title">
-    <div class="cell cell-label" data-reveal>
-      <h2 class="sec-title" id="cloakroom-title">Cloakroom in use</h2>
-    </div>
-    <div class="cell cell-body" data-reveal style="--d:70ms">
-      <div class="proof">
-        <p class="statement">Your agent reads your files. Some of them hold passwords, keys and customer names. Cloakroom swaps those for placeholders on your machine before the model sees them, then puts the real values back in the files the model writes. It learns from your corrections. It works with Claude Code, Codex CLI, Gemini CLI and Cursor.</p>
-        <figure class="media media-run">
-          <video class="run" width="1200" height="676" muted loop playsinline preload="none" poster="img/cloakroom-run-poster.jpg" aria-label="A recorded Claude Code run with Cloakroom: Claude reads a support ticket and a .env file and sees placeholders, while the files on disk keep the real name, email, phone, address and Stripe key; the reply Claude writes gets the real name back on disk.">
-            <source src="img/cloakroom-run.mp4" type="video/mp4">
-          </video>
-          <figcaption>A recorded Claude Code run. Left: what Claude sees. Right: what stays on your disk. The customer and the key are made up.</figcaption>
-        </figure>
-        <p class="tile-links">
-          <a href="https://cloakroom.sh/">cloakroom.sh</a>
-          <a href="https://github.com/shanjeevrajendran/cloakroom">Source</a>
-          <a href="https://pypi.org/project/cloakroom/">PyPI</a>
+    <section class="hero row" aria-labelledby="title">
+      <div class="body">
+        <h1 id="title" data-reveal><span class="line"><span>The tools I ship come</span></span> <span class="line"><span>out of what <span class="brk">breaks.</span></span></span></h1>
+        <p class="lede" data-reveal style="--d:80ms">I'm <span class="pii"><span class="r">Shanjeev Rajendran</span><span class="p" hidden>PII_PERSON_1</span></span>, a principal data engineer in Charlotte, North Carolina. I have built data platforms since 2012, and I run AI assistants on real work.</p>
+        <p class="actions" data-reveal style="--d:160ms">
+          <a class="button" href="#products">See what I've shipped</a>
+          <a class="link" href="#writing">Read the writing</a>
         </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="panel" id="how" aria-labelledby="how-title">
-    <div class="cell cell-label" data-reveal>
-      <h2 class="sec-title" id="how-title">How I work</h2>
-    </div>
-    <div class="cell cell-body" data-reveal style="--d:70ms">
-      <p class="statement">I keep a list of what gets in the way when AI assistants do real work. I check whether someone already fixed it. I build only where nothing fits, and every tool ships with a test you can rerun.</p>
-    </div>
-  </section>
+    <section class="row" id="products" aria-labelledby="products-title">
+      <div class="rail" data-reveal><h2 id="products-title">Products</h2></div>
+      <div class="body">
+        <article class="product" id="cloakroom" aria-labelledby="cloakroom-title">
+          <div class="measure" data-reveal style="--d:70ms">
+            <h3 id="cloakroom-title">Cloakroom</h3>
+            <p>Your agent reads your files. Some of them hold passwords, keys and customer names. Cloakroom swaps those for placeholders on your machine before the model sees them, then puts the real values back in the files the model writes.</p>
+            <p>It is free and open source. It works with Claude Code, Codex CLI, Gemini CLI and Cursor.</p>
+            <p class="product-links">
+              <a class="link" href="https://cloakroom.sh/">cloakroom.sh</a>
+              <a class="link" href="https://github.com/shanjeevrajendran/cloakroom">Source</a>
+              <a class="link" href="https://pypi.org/project/cloakroom/">PyPI</a>
+            </p>
+            <div class="view" role="group" aria-labelledby="view-label" hidden>
+              <span class="view-label" id="view-label">Read this page as</span>
+              <div class="seg">
+                <button type="button" data-view="you" aria-pressed="true">You</button>
+                <button type="button" data-view="agent" aria-pressed="false">An agent</button>
+              </div>
+            </div>
+            <p class="status note" id="view-status" aria-live="polite"></p>
+          </div>
+          <figure class="run" data-reveal>
+            <video controls muted loop playsinline preload="none" width="1200" height="676" poster="img/cloakroom-run-poster.webp" aria-label="A recorded Claude Code run with Cloakroom: Claude reads a support ticket and a .env file and sees placeholders, while the files on disk keep the real name, email, phone, address and Stripe key.">
+              <source src="img/cloakroom-run.mp4" type="video/mp4">
+            </video>
+            <figcaption class="note">A recorded Claude Code run. Left: what Claude sees. Right: what stays on your disk. The customer and the key are made up.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
 
-  <section class="panel" id="about" aria-labelledby="about-title">
-    <div class="cell cell-label" data-reveal>
-      <h2 class="sec-title" id="about-title"><span class="n">03</span>About</h2>
-    </div>
-    <div class="cell cell-body" data-reveal style="--d:70ms">
-      <div class="about">
-        <figure class="about-photo"><img src="img/about.jpg" width="640" height="800" loading="lazy" decoding="async" alt="Portrait of Shanjeev Rajendran, smiling, in a navy jacket and white shirt."></figure>
-        <div class="story">
+    <section class="row" id="how" aria-labelledby="how-title">
+      <div class="rail" data-reveal><h2 id="how-title">How I work</h2></div>
+      <div class="body">
+        <p class="statement" data-reveal style="--d:70ms"><span class="s">I keep a list of what gets in the way when AI assistants do real work.</span> <span class="s">I check whether someone already fixed it.</span> <span class="s">I build only where nothing fits, and every tool ships with a test you can rerun.</span></p>
+        <p class="note trace-intro" data-reveal>For Cloakroom, it went like this.</p>
+        <ol class="trace" data-reveal>
+          <li><span class="k">On the list</span><span class="d">I wanted my files to stay private when I used Claude Code.</span></li>
+          <li><span class="k">Already fixed?</span><span class="d">Nothing did it the way I needed.</span></li>
+          <li><span class="k">Built</span><span class="d">Cloakroom, open source, with a test you can rerun.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="row" id="writing" aria-labelledby="writing-title">
+      <div class="rail" data-reveal><h2 id="writing-title">Writing</h2></div>
+      <div class="body">
+        <ol class="rows">
+          <li data-reveal style="--d:60ms"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7522873173592133632/"><span class="t">Apple's Illusion of Thinking: the paper is right, the lesson is wrong</span><span class="v">LinkedIn · <time datetime="2026-11-01">1 Nov 2026</time></span></a></li>
+          <li data-reveal style="--d:120ms"><a href="https://dev.to/shanjeev_rajendran/what-cloakroom-would-and-wouldnt-have-done-in-octobers-incidents-45h"><span class="t">What Cloakroom would and wouldn't have done in October's incidents</span><span class="v">dev.to · <time datetime="2026-10-28">28 Oct 2026</time></span></a></li>
+          <li data-reveal style="--d:180ms"><a href="https://medium.com/@shanjeev/keep-your-secrets-and-personal-data-away-from-your-coding-agent-e07d4cef0c5a"><span class="t">Keep your secrets and personal data away from your coding agent</span><span class="v">Medium · <time datetime="2026-10-25">25 Oct 2026</time></span></a></li>
+          <li data-reveal style="--d:240ms"><a href="https://cloakroom.sh/"><span class="t">How I keep secrets and personal data out of Claude Code</span><span class="v">cloakroom.sh · <time datetime="2026-10-15">15 Oct 2026</time></span></a></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="row" id="about" aria-labelledby="about-title">
+      <div class="rail" data-reveal><h2 id="about-title">About</h2></div>
+      <div class="body about">
+        <div class="letter" data-reveal style="--d:70ms">
           <p>I live in Charlotte, North Carolina. I've worked in IT since 2012, most of it building data platforms for aviation, banking, telecom, hospitality and retail. I'm now focused on agentic AI: building assistants that do real work, and making them reliable and private enough to trust with real data.</p>
           <p>I like building things, and I find it hard to leave a working thing alone. A pipeline that runs should run without anyone watching it. A query that works can usually cost less. I go back over my own work more often than anyone asks me to.</p>
           <p>Cloakroom started as a home project. I was setting up an AI model to run on my own machine, because I wanted my files to stay private. I wanted the same privacy when I used Claude Code, and nothing did it the way I needed. So I built it, and made it open source.</p>
+          <p>Most days I work in Snowflake, dbt, Airflow, Python and AWS. I hold the SnowPro Core and CKAD certifications, and a degree in mechanical engineering from Anna University.</p>
+          <p class="signoff"><span class="who"><span class="pii"><span class="r">Shanjeev Rajendran</span><span class="p" hidden>PII_PERSON_1</span></span></span><span class="note">Principal Data Engineer</span></p>
         </div>
-        <aside class="spec" aria-label="Stack and credentials">
-          <p>Most days I work in Snowflake, dbt, Airflow, Python and AWS.</p>
-          <dl>
-            <dt>Credentials</dt>
-            <dd>SnowPro Core</dd>
-            <dd>CKAD</dd>
-            <dd>B.E. Mechanical Engineering (Anna University)</dd>
-          </dl>
-        </aside>
+        <figure class="portrait" data-reveal style="--d:140ms">
+          <img src="img/about.webp" width="652" height="815" loading="lazy" decoding="async" alt="Portrait of Shanjeev Rajendran, smiling, in a navy jacket and white shirt.">
+        </figure>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </div>
 </main>
 
-<footer class="panel foot" id="elsewhere" aria-labelledby="foot-title">
-  <div class="cell cell-label">
-    <h2 class="sec-title" id="foot-title"><span class="n">04</span>Elsewhere</h2>
-  </div>
-  <div class="cell cell-body">
-    <nav class="foot-links" aria-labelledby="foot-title">
-      <a href="https://github.com/shanjeevrajendran">GitHub</a>
-      <a href="https://www.linkedin.com/in/shanjeevrajendran">LinkedIn</a>
-      <a href="https://x.com/Shanjv05">X</a>
-      <a href="https://bsky.app/profile/shanjeev.bsky.social">Bluesky</a>
-      <a href="https://dev.to/shanjeev_rajendran">dev.to</a>
-      <a href="https://medium.com/@shanjeev">Medium</a>
-      <a href="https://shanjeev.hashnode.dev">Hashnode</a>
-    </nav>
-    <p class="foot-name"><a href="#top">Shanjeev Rajendran</a></p>
+<footer id="elsewhere" aria-labelledby="elsewhere-title">
+  <div class="wrap">
+    <div class="row">
+      <div class="rail" data-reveal><h2 id="elsewhere-title">Elsewhere</h2></div>
+      <div class="body">
+        <ul class="rows">
+          <li><a rel="me" href="https://github.com/shanjeevrajendran"><span class="t">GitHub</span><span class="v pii"><span class="r">github.com/shanjeevrajendran</span><span class="p" hidden>PII_URL_1</span></span></a></li>
+          <li><a rel="me" href="https://www.linkedin.com/in/shanjeevrajendran"><span class="t">LinkedIn</span><span class="v pii"><span class="r">linkedin.com/in/shanjeevrajendran</span><span class="p" hidden>PII_URL_2</span></span></a></li>
+          <li><a rel="me" href="https://x.com/Shanjv05"><span class="t">X</span><span class="v pii"><span class="r">x.com/Shanjv05</span><span class="p" hidden>PII_URL_3</span></span></a></li>
+          <li><a rel="me" href="https://bsky.app/profile/shanjeev.bsky.social"><span class="t">Bluesky</span><span class="v pii"><span class="r">bsky.app/profile/shanjeev.bsky.social</span><span class="p" hidden>PII_URL_4</span></span></a></li>
+          <li><a rel="me" href="https://dev.to/shanjeev_rajendran"><span class="t">dev.to</span><span class="v pii"><span class="r">dev.to/shanjeev_rajendran</span><span class="p" hidden>PII_URL_5</span></span></a></li>
+          <li><a rel="me" href="https://medium.com/@shanjeev"><span class="t">Medium</span><span class="v pii"><span class="r">medium.com/@shanjeev</span><span class="p" hidden>PII_URL_6</span></span></a></li>
+          <li><a rel="me" href="https://shanjeev.hashnode.dev"><span class="t">Hashnode</span><span class="v pii"><span class="r">shanjeev.hashnode.dev</span><span class="p" hidden>PII_URL_7</span></span></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="close note">
+      <a href="#top"><span class="pii"><span class="r">Shanjeev Rajendran</span><span class="p" hidden>PII_PERSON_1</span></span></a>
+      <span>Charlotte, North Carolina</span>
+    </p>
   </div>
 </footer>
-<script src="site.js?v=4" defer></script>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Entrances: once, as each part enters the view.
+  var items = document.querySelectorAll('[data-reveal]');
+  var io = null;
+  if (still || !('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('is-in'); });
+  } else {
+    io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-in');
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -6% 0px' });
+    items.forEach(function (el) { io.observe(el); });
+  }
+
+  // The recorded run plays, muted, while it is on screen. It has controls, and reduced motion keeps the poster.
+  var run = document.querySelector('.run video');
+  if (run && !still && 'IntersectionObserver' in window) {
+    var paused = false;
+    run.addEventListener('pause', function () { if (!run.dataset.auto) paused = true; });
+    run.addEventListener('play', function () { paused = false; });
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        run.dataset.auto = '1';
+        if (e.isIntersecting && !paused) run.play().catch(function () {});
+        else if (!e.isIntersecting) run.pause();
+        setTimeout(function () { delete run.dataset.auto; }, 0);
+      });
+    }, { threshold: 0.4 }).observe(run);
+  }
+
+  // The switch: read the page as you, or as an agent with Cloakroom on.
+  var group = document.querySelector('.view');
+  var buttons = [].slice.call(document.querySelectorAll('[data-view]'));
+  var marks = [].slice.call(document.querySelectorAll('.pii'));
+  var status = document.getElementById('view-status');
+  var timers = [];
+  var said = 'Cloakroom swapped my name and seven profile addresses for placeholders, starting with the name at the top of this page. Everything else reads the same.';
+
+  function mark(m, on) {
+    m.classList.toggle('is-masked', on);
+    m.querySelector('.r').hidden = on;
+    m.querySelector('.p').hidden = !on;
+  }
+  function view(agent, instant) {
+    timers.forEach(clearTimeout); timers = [];
+    root.classList.toggle('agent', agent);
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', String((b.dataset.view === 'agent') === agent)); });
+    var line = !instant && !still && root.classList.contains('anim-d');
+    marks.forEach(function (m, i) {
+      if (instant || still) { mark(m, agent); return; }
+      var wait = i * 70;
+      if (line) {
+        var top = m.getBoundingClientRect().top;
+        wait = top < 0 || top > window.innerHeight ? 0 : Math.round(top / window.innerHeight * 900);
+      }
+      timers.push(setTimeout(function () { mark(m, agent); }, wait));
+    });
+    if (line) {
+      var el = document.createElement('div');
+      el.className = 'scan';
+      el.addEventListener('animationend', function () { el.remove(); });
+      document.body.appendChild(el);
+    }
+    status.textContent = agent ? said : '';
+    try { history.replaceState(null, '', agent ? '#agent' : location.pathname + location.search); } catch (e) {}
+  }
+  group.hidden = false;
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { view(b.dataset.view === 'agent'); });
+  });
+  if (location.hash === '#agent') view(true, true);
+})();
+</script>
 </body>
 </html>

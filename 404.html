@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found · Shanjeev Rajendran</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d0d0c" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Geist"; src: url("/fonts/geist.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+:root {
+  --bg: #f7f7f5;
+  --ink: #141414;
+  --muted: #55554f;
+  --margin: 32px;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d0d0c;
+    --ink: #ececea;
+    --muted: #a5a5a0;
+  }
+}
+@media (max-width: 899px) { :root { --margin: 20px; } }
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 18px/1.55 "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+h1, p { margin: 0; }
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.wrap { max-width: 1440px; margin: 0 auto; padding: 0 var(--margin); }
+.name { display: inline-flex; align-items: center; min-height: 68px; font-size: 18px; font-weight: 500; text-decoration: none; }
+h1 { margin-top: 88px; font-size: 30px; line-height: 1.15; font-weight: 500; letter-spacing: -0.02em; }
+.home { display: inline-flex; align-items: center; min-height: 44px; margin-top: 24px; font-size: 18px; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="name" href="/">Shanjeev Rajendran</a>
+  <h1>This page does not exist.</h1>
+  <p><a class="home" href="/">Go to the front page</a></p>
+</div>
+</body>
+</html>
